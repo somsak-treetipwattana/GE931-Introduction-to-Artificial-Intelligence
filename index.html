@@ -1479,89 +1479,6 @@ sequenceDiagram
       }
     });
 
-    // 5. Tabbed Slide Content for Aspect 5 (NotebookLM)
-    const slidesData = [
-      {
-        title: "Slide 1: Clinical Problem & Market Readiness in Thailand",
-        blueprint: "Epidemiological Prevalence Map & Outpatient Clinic Bottlenecks",
-        bullets: [
-          "Target Indication: Automated screening of non-mydriatic fundus images for moderate-or-worse NPDR and referable DME.",
-          "Target Setting: Thai primary-care and secondary community hospital outpatient units lacking on-site ophthalmologists.",
-          "Clinical Value: Reduces screening turnaround time from weeks to < 2 minutes with immediate referral flagging."
-        ],
-        speaker: "Citing Thai Ministry of Public Health DR screening guidelines and national diabetes prevention mandates."
-      },
-      {
-        title: "Slide 2: Regulatory Risk Classification & Clinical Efficacy",
-        blueprint: "Clinical Efficacy Matrix Table (N = 4,280 validation cohort)",
-        bullets: [
-          "Classification: Class 3 Active Diagnostic SaMD under ASEAN CSDT / Thai FDA Classification Rule 10.",
-          "Primary Diagnostic Endpoint: AUC-ROC of 0.962 [95% CI: 0.951, 0.972], robustly exceeding the >= 0.900 baseline.",
-          "Sensitivity & Specificity: Sensitivity 93.4% and Specificity 91.2% benchmarked against 3 Thai board-certified retinal specialists.",
-          "Image Rejection Gate: Image unreadable rate capped at 2.1%, well below the <= 5.0% regulatory failure ceiling."
-        ],
-        speaker: "Citing Thai FDA Medical Device Control Division Essential Principles for active SaMD software."
-      },
-      {
-        title: "Slide 3: Essential CSDT Submission Dossier Checklist",
-        blueprint: "The 3 Pillars Architecture: QMS, Lifecycle, and Risk Control",
-        bullets: [
-          "ISO 13485:2016: Fully audited Quality Management System governing software development, design control, and PMCF.",
-          "IEC 62304:2006/AMD 1:2015: Architecture categorized as Safety Class B; verified unit testing, clinical integration, and cybersecurity.",
-          "ISO 14971:2019: Closed-loop risk mitigation controlling for ungradable optical inputs, compression artifacts, and cloud API fallback."
-        ],
-        speaker: "Citing ASEAN Common Submission Dossier Template (CSDT) Annex 2 & Thai Medical Device Act (B.E. 2551)."
-      },
-      {
-        title: "Slide 4: Commercial Break-Even & Financial Projections",
-        blueprint: "Desmos Unit Economics Graph (Cost vs. Revenue Intersect)",
-        bullets: [
-          "Fixed Capital Expenditure (F): 150,000 THB covering Thai FDA filing fees and initial hospital deployment.",
-          "Variable Operational Expense (c): 50 THB cloud inference compute cost per fundus scan.",
-          "Hospital Screening Tariff (p): 350 THB outpatient screening charge.",
-          "Commercial Break-Even: Net profitability achieved at exactly 500 scans (175,000 THB total volume)."
-        ],
-        speaker: "Demonstrating 300 THB unit contribution margin to justify hospital C-suite procurement capex."
-      },
-      {
-        title: "Slide 5: Post-Market Surveillance (PMS) & Vigilance Loop",
-        blueprint: "10-Step Regulatory Sequence Map with 60-Day Clock",
-        bullets: [
-          "Biannual PMCF: Structured Post-Market Clinical Follow-up routines logging adverse events, false negatives, and drift.",
-          "Statutory Deficiency Clock: Pre-staged technical addenda ready for 60-day response window upon expert evaluation.",
-          "Board Action Mandate: Immediate formal authorization to allocate 150,000 THB capex and submit CSDT dossier."
-        ],
-        speaker: "Citing Thai FDA Post-Marketing Surveillance and Vigilance Directives for Class 3 SaMD."
-      }
-    ];
-
-    function switchTab(index) {
-      const container = document.getElementById('tab-content');
-      const indicator = document.getElementById('tab-indicator');
-      const buttons = document.querySelectorAll('.tab-btn');
-
-      buttons.forEach((btn, i) => {
-        if (i === index) {
-          btn.className = "tab-btn px-4 py-2 text-xs sm:text-sm font-mono font-medium bg-sky-600 text-white transition-all whitespace-nowrap shadow-sm rounded-none";
-        } else {
-          btn.className = "tab-btn px-4 py-2 text-xs sm:text-sm font-mono font-medium bg-slate-100 text-slate-600 hover:bg-sky-50 hover:text-sky-700 transition-all whitespace-nowrap rounded-none";
-        }
-      });
-
-      const slide = slidesData[index];
-      container.innerHTML = `
-        <div class="font-bold text-sky-900 text-base mb-1.5">${slide.title}</div>
-        <div class="text-xs font-mono text-slate-500 mb-3">Visual Blueprint: ${slide.blueprint}</div>
-        <ul class="list-disc list-inside space-y-1.5 text-slate-700 mb-4 text-xs sm:text-sm">
-          ${slide.bullets.map(b => `<li>${b}</li>`).join('')}
-        </ul>
-        <div class="p-3.5 bg-sky-50 border border-sky-200 text-xs sm:text-sm text-sky-950 font-mono rounded-none">
-          <strong class="font-sans">Speaker Notes:</strong> ${slide.speaker}
-        </div>
-      `;
-      indicator.innerText = `Slide ${index + 1} of 5`;
-    }
-
     const aspect5ZeroShotImages = Array.from({ length: 14 }, (_, i) => `images/aspect5/zero_shot/${i + 1}.png`);
     const aspect5FewShotImages = Array.from({ length: 7 }, (_, i) => `images/aspect5/few_shot/${i + 1}.png`);
     let aspect5ZeroShotIndex = 0;
@@ -1607,9 +1524,6 @@ sequenceDiagram
 
     renderAspect5ZeroShot();
     renderAspect5FewShot();
-
-    // Initialize Slide 1 on load
-    switchTab(0);
 
     // 6. Chart.js Unit Economics Engine
     const ctx = document.getElementById('breakEvenChart').getContext('2d');
