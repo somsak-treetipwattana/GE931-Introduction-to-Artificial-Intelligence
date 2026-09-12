@@ -1199,14 +1199,26 @@ sequenceDiagram
 
           <!-- Slide 27 -->
           <div class="p-6 sm:p-7 bg-white text-slate-800 shadow-md rounded-none">
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
               <span class="px-3.5 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider bg-sky-600 text-white shadow-sm rounded-none">
                 Slide 27 &bull; Result of Initial Prompt (Zero-Shot Output)
               </span>
-              <span class="text-xs font-mono text-slate-500 font-semibold">Amateurish Skeleton</span>
+              <div class="flex items-center gap-2">
+                <a href="assets/Zero%20shot_index.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 text-[11px] sm:text-xs font-mono font-semibold bg-sky-100 text-sky-800 border border-sky-200 hover:bg-sky-200 transition-colors rounded-none">
+                  Open full page
+                </a>
+                <span class="text-xs font-mono text-slate-500 font-semibold">Amateurish Skeleton</span>
+              </div>
             </div>
-            <div class="p-4 bg-slate-50 border border-slate-200 font-mono text-sm text-slate-700 rounded-none">
-              &lt;html&gt;&lt;body&gt;&lt;h1&gt;Medical Device Portfolio&lt;/h1&gt;&lt;p&gt;Welcome to our device page...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+
+            <div class="border border-slate-200 bg-slate-100 shadow-inner rounded-none overflow-hidden">
+              <iframe
+                src="assets/Zero%20shot_index.html"
+                title="Zero-shot portfolio preview"
+                class="w-full h-[700px] bg-white"
+                loading="lazy"
+                scrolling="yes"
+              ></iframe>
             </div>
           </div>
 

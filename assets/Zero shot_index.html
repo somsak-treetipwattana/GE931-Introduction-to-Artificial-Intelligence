@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RetinaAI-Dx | Class 3 AI-SaMD Portfolio & Regulatory Hub</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+          <i data-lucide="eye" class="w-5 h-5 text-white"></i>
+        </div>
+        <div>
+          <span class="text-lg font-bold tracking-tight text-white">RetinaAI<span class="text-cyan-400">-Dx</span></span>
+          <span class="hidden sm:inline-block ml-2 px-2 py-0.5 text-xs font-semibold rounded bg-cyan-950 text-cyan-300 border border-cyan-800">Class 3 SaMD</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#clinical" class="hover:text-cyan-400 transition-colors">Clinical Evidence</a>
+        <a href="#economics" class="hover:text-cyan-400 transition-colors">Hospital Economics</a>
+        <a href="#regulatory" class="hover:text-cyan-400 transition-colors">Thai FDA Dossier</a>
+      </nav>
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-950 text-emerald-300 border border-emerald-800">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+          Ready for E-Submission
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700 mb-6">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span>UDI-DI: 885901234RETINA01V5 &bull; Build v2.4.1</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Automated Retinal Screening with Clinical-Grade AI.
+        </h1>
+        <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+          Class 3 Active Diagnostic SaMD engineered for non-mydriatic digital fundus photography. Detecting moderate-or-worse Diabetic Retinopathy (NPDR) and referable Diabetic Macular Edema (DME) with clinical certainty across Thai outpatient clinics.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#economics" class="inline-flex items-center px-6 py-3 rounded-lg text-sm font-semibold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-colors shadow-lg shadow-cyan-500/20">
+            <i data-lucide="calculator" class="w-4 h-4 mr-2"></i> Simulate ROI Model
+          </a>
+          <a href="#clinical" class="inline-flex items-center px-6 py-3 rounded-lg text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-colors">
+            <i data-lucide="file-check" class="w-4 h-4 mr-2"></i> Review Clinical Metrics
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clinical Evidence KPI Dashboard -->
+  <section id="clinical" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold text-white tracking-tight flex items-center">
+        <i data-lucide="activity" class="w-6 h-6 mr-3 text-cyan-400"></i>
+        Pivotal Clinical Validation Endpoints
+      </h2>
+      <p class="text-slate-400 text-sm mt-1">Multi-center Thai hospital study ($N = 4{,}280$ fundus images from $2{,}140$ patients) benchmarked against expert panel adjudication.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- KPI 1 -->
+      <div class="p-6 rounded-xl bg-slate-800/60 border border-slate-700/80 relative overflow-hidden">
+        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Primary Endpoint</div>
+        <div class="mt-2 flex items-baseline justify-between">
+          <span class="text-4xl font-extrabold text-white">0.962</span>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">Target &ge; 0.900</span>
+        </div>
+        <div class="text-sm font-medium text-cyan-400 mt-1">AUC-ROC [0.951, 0.972]</div>
+        <p class="text-xs text-slate-400 mt-3">Exceeds Thai FDA acceptance threshold with zero demographic drift.</p>
+      </div>
+
+      <!-- KPI 2 -->
+      <div class="p-6 rounded-xl bg-slate-800/60 border border-slate-700/80">
+        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Sensitivity</div>
+        <div class="mt-2 flex items-baseline justify-between">
+          <span class="text-4xl font-extrabold text-white">93.4%</span>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">Target &ge; 85.0%</span>
+        </div>
+        <div class="text-sm font-medium text-cyan-400 mt-1">95% CI: [91.8%, 94.8%]</div>
+        <p class="text-xs text-slate-400 mt-3">Superior detection of referable NPDR and sight-threatening DME.</p>
+      </div>
+
+      <!-- KPI 3 -->
+      <div class="p-6 rounded-xl bg-slate-800/60 border border-slate-700/80">
+        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Specificity</div>
+        <div class="mt-2 flex items-baseline justify-between">
+          <span class="text-4xl font-extrabold text-white">91.2%</span>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">Target &ge; 85.0%</span>
+        </div>
+        <div class="text-sm font-medium text-cyan-400 mt-1">95% CI: [89.9%, 92.4%]</div>
+        <p class="text-xs text-slate-400 mt-3">Minimizes healthy outpatient false positives and unnecessary referrals.</p>
+      </div>
+
+      <!-- KPI 4 -->
+      <div class="p-6 rounded-xl bg-slate-800/60 border border-slate-700/80">
+        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Unreadable Rate</div>
+        <div class="mt-2 flex items-baseline justify-between">
+          <span class="text-4xl font-extrabold text-white">2.1%</span>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">Ceiling &le; 5.0%</span>
+        </div>
+        <div class="text-sm font-medium text-cyan-400 mt-1">95% CI: [1.5%, 2.8%]</div>
+        <p class="text-xs text-slate-400 mt-3">Automated quality gate rejects blurry or under-illuminated captures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Desmos-Style Economics Calculator -->
+  <section id="economics" class="py-16 bg-slate-950 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-white tracking-tight flex items-center">
+            <i data-lucide="trending-up" class="w-6 h-6 mr-3 text-cyan-400"></i>
+            Interactive Hospital Break-Even Simulation
+          </h2>
+          <p class="text-slate-400 text-sm mt-1">Adjust local deployment parameters to model clinical cost recovery.</p>
+        </div>
+        <div class="px-4 py-2 bg-slate-900 border border-cyan-500/30 rounded-lg flex items-center space-x-3">
+          <span class="text-xs text-slate-400">Break-Even Threshold:</span>
+          <span id="kpi-break-even" class="text-lg font-bold text-cyan-400">500 Scans</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <!-- Controls Sidebar -->
+        <div class="p-6 bg-slate-900 rounded-xl border border-slate-800 space-y-6">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300 border-b border-slate-800 pb-3">Economic Parameters (THB)</h3>
+          
+          <!-- Slider F -->
+          <div>
+            <div class="flex justify-between text-sm mb-1.5">
+              <span class="text-slate-400">Fixed Capex / Setup ($F$):</span>
+              <span id="lbl-f" class="font-mono font-semibold text-white">150,000 THB</span>
+            </div>
+            <input type="range" id="slider-f" min="50000" max="400000" step="10000" value="150000" class="w-full accent-cyan-400 cursor-pointer" />
+            <span class="text-[11px] text-slate-500">Thai FDA submission, on-prem setup, integration</span>
+          </div>
+
+          <!-- Slider c -->
+          <div>
+            <div class="flex justify-between text-sm mb-1.5">
+              <span class="text-slate-400">Variable Cloud Cost ($c$):</span>
+              <span id="lbl-c" class="font-mono font-semibold text-white">50 THB</span>
+            </div>
+            <input type="range" id="slider-c" min="10" max="150" step="5" value="50" class="w-full accent-cyan-400 cursor-pointer" />
+            <span class="text-[11px] text-slate-500">Per-scan API compute & operator time</span>
+          </div>
+
+          <!-- Slider p -->
+          <div>
+            <div class="flex justify-between text-sm mb-1.5">
+              <span class="text-slate-400">Patient Screening Fee ($p$):</span>
+              <span id="lbl-p" class="font-mono font-semibold text-white">350 THB</span>
+            </div>
+            <input type="range" id="slider-p" min="100" max="800" step="25" value="350" class="w-full accent-cyan-400 cursor-pointer" />
+            <span class="text-[11px] text-slate-500">Hospital outpatient diagnostic tariff</span>
+          </div>
+
+          <!-- Calculated Output Card -->
+          <div class="p-4 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs space-y-2">
+            <div class="flex justify-between">
+              <span class="text-slate-400">Unit Contribution Margin:</span>
+              <span id="lbl-margin" class="font-mono font-semibold text-emerald-400">300 THB / scan</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Total Value at Break-Even:</span>
+              <span id="lbl-be-val" class="font-mono font-semibold text-cyan-300">175,000 THB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart Canvas -->
+        <div class="lg:col-span-2 p-6 bg-slate-900 rounded-xl border border-slate-800">
+          <div class="h-80 w-full">
+            <canvas id="breakEvenChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standards & Regulatory Workflow -->
+  <section id="regulatory" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold text-white tracking-tight flex items-center">
+        <i data-lucide="award" class="w-6 h-6 mr-3 text-cyan-400"></i>
+        ASEAN CSDT Compliance Pillars & Approval Timeline
+      </h2>
+      <p class="text-slate-400 text-sm mt-1">Full adherence to Thai FDA Medical Device Control Division Rule 10 standards.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-xl bg-slate-800/50 border border-slate-700">
+        <div class="w-10 h-10 rounded-lg bg-blue-900/50 text-cyan-400 flex items-center justify-center mb-4">
+          <i data-lucide="layers" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white">ISO 13485:2016</h3>
+        <p class="text-xs text-cyan-400 font-mono mt-0.5">Quality Management Systems</p>
+        <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+          Audited QMS covering software design controls, supplier verification, and biannual Post-Market Clinical Follow-up (PMCF) routines.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-slate-800/50 border border-slate-700">
+        <div class="w-10 h-10 rounded-lg bg-blue-900/50 text-cyan-400 flex items-center justify-center mb-4">
+          <i data-lucide="cpu" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white">IEC 62304:2006/AMD1</h3>
+        <p class="text-xs text-cyan-400 font-mono mt-0.5">Safety Class B Software Lifecycle</p>
+        <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+          End-to-end traced lifecycle: unit testing, clinical integration verification, and medical-grade cybersecurity hardening.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-slate-800/50 border border-slate-700">
+        <div class="w-10 h-10 rounded-lg bg-blue-900/50 text-cyan-400 flex items-center justify-center mb-4">
+          <i data-lucide="shield-alert" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white">ISO 14971:2019</h3>
+        <p class="text-xs text-cyan-400 font-mono mt-0.5">Medical Device Risk Management</p>
+        <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+          Closed-loop hazard mapping to mitigations: ungradable image rejection gates, compression artifact filters, and cloud fallback protocols.
+        </p>
+      </div>
+    </div>
+
+    <!-- Statutory Timeline Box -->
+    <div class="mt-8 p-6 rounded-xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-slate-700 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-1">
+        <div class="flex items-center space-x-2">
+          <span class="px-2 py-0.5 text-xs font-semibold rounded bg-amber-950 text-amber-300 border border-amber-800">Statutory Clock</span>
+          <span class="text-sm font-bold text-white">Thai FDA 60-Day Deficiency Window Handled</span>
+        </div>
+        <p class="text-xs text-slate-400">
+          Pre-validated technical addenda and clinical subsets staged for instant response to external expert inquiries.
+        </p>
+      </div>
+      <button onclick="alert('Dossier executive summary ready for Board review.')" class="px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-colors whitespace-nowrap">
+        Authorize Board E-Submission
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-800 text-center text-xs text-slate-500">
+    <p>&copy; 2026 RetinaAI-Dx Regulatory Affairs & Clinical Affairs Directorate. Confidential — For Thai FDA Registration Dossier Review.</p>
+  </footer>
+
+  <!-- Script for Lucide & Interactive Chart -->
+  <script>
+    lucide.createIcons();
+
+    // Chart.js Setup
+    const ctx = document.getElementById('breakEvenChart').getContext('2d');
+    let chart;
+
+    function calculateChartData(F, c, p) {
+      const maxScans = 1200;
+      const step = 100;
+      const labels = [];
+      const revenueData = [];
+      const costData = [];
+
+      for (let x = 0; x <= maxScans; x += step) {
+        labels.push(x);
+        costData.push(F + c * x);
+        revenueData.push(p * x);
+      }
+
+      const q_be = (p > c) ? Math.round(F / (p - c)) : 0;
+      const val_be = q_be * p;
+
+      return { labels, revenueData, costData, q_be, val_be };
+    }
+
+    function initChart() {
+      const F = parseFloat(document.getElementById('slider-f').value);
+      const c = parseFloat(document.getElementById('slider-c').value);
+      const p = parseFloat(document.getElementById('slider-p').value);
+
+      const data = calculateChartData(F, c, p);
+
+      chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.labels,
+          datasets: [
+            {
+              label: 'Total Revenue R(x)',
+              data: data.revenueData,
+              borderColor: '#10b981',
+              backgroundColor: 'rgba(16, 185, 129, 0.1)',
+              borderWidth: 2.5,
+              tension: 0.1,
+              fill: false
+            },
+            {
+              label: 'Total Cost C(x)',
+              data: data.costData,
+              borderColor: '#0284c7',
+              backgroundColor: 'rgba(2, 132, 199, 0.1)',
+              borderWidth: 2.5,
+              tension: 0.1,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { labels: { color: '#94a3b8', font: { family: 'Inter', size: 11 } } },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return `${context.dataset.label}: ${context.parsed.y.toLocaleString()} THB`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: { display: true, text: 'Patient Scans (Cases)', color: '#64748b' },
+              grid: { color: 'rgba(51, 65, 85, 0.3)' },
+              ticks: { color: '#94a3b8' }
+            },
+            y: {
+              title: { display: true, text: 'Monetary Value (THB)', color: '#64748b' },
+              grid: { color: 'rgba(51, 65, 85, 0.3)' },
+              ticks: {
+                color: '#94a3b8',
+                callback: function(value) { return value.toLocaleString() + ' ฿'; }
+              }
+            }
+          }
+        }
+      });
+
+      updateUI(F, c, p, data.q_be, data.val_be);
+    }
+
+    function updateUI(F, c, p, q_be, val_be) {
+      document.getElementById('lbl-f').innerText = `${F.toLocaleString()} THB`;
+      document.getElementById('lbl-c').innerText = `${c.toLocaleString()} THB`;
+      document.getElementById('lbl-p').innerText = `${p.toLocaleString()} THB`;
+      document.getElementById('lbl-margin').innerText = `${(p - c).toLocaleString()} THB / scan`;
+      document.getElementById('lbl-be-val').innerText = `${val_be.toLocaleString()} THB`;
+      document.getElementById('kpi-break-even').innerText = `${q_be.toLocaleString()} Scans`;
+    }
+
+    function updateChart() {
+      const F = parseFloat(document.getElementById('slider-f').value);
+      const c = parseFloat(document.getElementById('slider-c').value);
+      const p = parseFloat(document.getElementById('slider-p').value);
+
+      const data = calculateChartData(F, c, p);
+
+      chart.data.labels = data.labels;
+      chart.data.datasets[0].data = data.revenueData;
+      chart.data.datasets[1].data = data.costData;
+      chart.update();
+
+      updateUI(F, c, p, data.q_be, data.val_be);
+    }
+
+    document.getElementById('slider-f').addEventListener('input', updateChart);
+    document.getElementById('slider-c').addEventListener('input', updateChart);
+    document.getElementById('slider-p').addEventListener('input', updateChart);
+
+    window.addEventListener('load', initChart);
+  </script>
+</body>
+</html>
