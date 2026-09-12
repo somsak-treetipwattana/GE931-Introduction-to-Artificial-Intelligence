@@ -878,7 +878,7 @@ sequenceDiagram
       <!-- ==========================================
            ASPECT 4: TECHNICAL DOCUMENTATION (LATEX) - SKY BLUE THEME
       ========================================== -->
-      <section id="aspect-4" class="bg-gradient-to-br from-sky-600 to-sky-700 text-white shadow-xl overflow-hidden border border-sky-400/40 transition-all rounded-none">
+      <section id="aspect-4" class="bg-gradient-to-br from-sky-600 to-sky-700 text-white shadow-xl overflow-hidden border border-sky-400/40 transition-all rounded-none text-justify">
         <div class="p-6 sm:p-8 bg-white/10 backdrop-blur-sm border-b border-sky-400/30 flex items-center justify-between rounded-none">
           <div>
             <span class="text-xs font-mono font-bold text-sky-200 tracking-wider uppercase">Aspect 4 &bull; Slides 16–20</span>
@@ -890,7 +890,7 @@ sequenceDiagram
           </div>
         </div>
 
-        <div class="p-6 sm:p-8 space-y-8">
+        <div class="p-6 sm:p-8 space-y-8 text-justify">
           <!-- Slide 16 -->
           <div class="p-6 sm:p-7 bg-white text-slate-800 shadow-md rounded-none">
             <div class="flex items-center justify-between mb-4">
@@ -917,41 +917,45 @@ sequenceDiagram
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
               <div class="lg:col-span-5">
-                <div class="p-5 bg-slate-50 border border-slate-200 rounded-none">
-                  <div class="text-xs uppercase font-bold tracking-wider text-sky-700 font-mono mb-3">Device Information</div>
-                  <dl class="space-y-3 text-sm text-slate-700">
-                    <div>
-                      <dt class="font-semibold text-slate-900">Device Name</dt>
-                      <dd class="font-mono text-sky-800">RetinaAI-Dx Active Diagnostic SaMD</dd>
-                    </div>
-                    <div>
-                      <dt class="font-semibold text-slate-900">Intended Use</dt>
-                      <dd>AI-assisted retinal screening and diagnostic support for ophthalmic clinical workflows.</dd>
-                    </div>
-                    <div>
-                      <dt class="font-semibold text-slate-900">Regulatory Class</dt>
-                      <dd>Class 3 Software as a Medical Device (SaMD)</dd>
-                    </div>
-                    <div>
-                      <dt class="font-semibold text-slate-900">Primary Clinical Scope</dt>
-                      <dd>Detection support for retinal abnormalities in hospital outpatient settings.</dd>
-                    </div>
-                  </dl>
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-none text-justify">
+                  <div class="text-xs uppercase font-bold tracking-wider text-sky-700 font-mono mb-3">1 Device Identification</div>
+                  <table class="w-full text-sm text-slate-700 border-separate border-spacing-y-2">
+                    <tbody>
+                      <tr>
+                        <th class="py-2 pr-4 align-top text-left font-semibold text-slate-900 whitespace-nowrap">Parameter</th>
+                        <th class="py-2 pl-2 align-top text-left font-semibold text-slate-900">Details</th>
+                      </tr>
+                      <tr>
+                        <td class="py-2 pr-4 align-top font-medium text-slate-900">Device Trade Name</td>
+                        <td class="py-2 pl-2 align-top">MediScan Diagnostic Platform</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 pr-4 align-top font-medium text-slate-900">Model / Catalog Number</td>
+                        <td class="py-2 pl-2 align-top">MS-2026-X</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 pr-4 align-top font-medium text-slate-900">Device Classification</td>
+                        <td class="py-2 pl-2 align-top">Class IIb / Class 3</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 pr-4 align-top font-medium text-slate-900">Manufacturer</td>
+                        <td class="py-2 pl-2 align-top">HealthTech Solutions Ltd.</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2 pr-4 align-top font-medium text-slate-900">Document Control ID</td>
+                        <td class="py-2 pl-2 align-top">MDR-2026-001-REV02</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
 
               <div class="lg:col-span-7">
-                <div class="p-5 bg-slate-50 border border-slate-200 rounded-none">
-                  <div class="text-xs uppercase font-bold tracking-wider text-sky-700 font-mono mb-3">Executive Summary</div>
+                <div class="p-5 bg-slate-50 border border-slate-200 rounded-none text-justify">
+                  <div class="text-xs uppercase font-bold tracking-wider text-sky-700 font-mono mb-3">2 Executive Summary</div>
                   <div class="space-y-3 text-sm text-slate-700 leading-relaxed">
                     <p>
-                      The zero-shot document captures the baseline concept for a retinal screening AI platform, outlining the intended use, clinical value proposition, and the regulatory framing expected for Thai FDA submission.
-                    </p>
-                    <p>
-                      It identifies the target product as an active diagnostic SaMD with a high-risk clinical scope, while surfacing the need for stronger device identification, structured validation evidence, and more rigorous safety and performance documentation.
-                    </p>
-                    <p>
-                      The report underlines the central weakness of generic prompt output: a plausible medical device narrative without the traceability, quantitative evidence, and quality-system structure required for regulatory review.
+                      This report documents the verification, clinical evaluation, and regulatory compliance status of the device specified above. The device fulfills essential safety and performance requirements under applicable medical device directives and international quality standards.
                     </p>
                   </div>
                 </div>
