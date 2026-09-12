@@ -1115,6 +1115,24 @@ sequenceDiagram
               <div>Topic: "The Generative Divide: From Toys to Compliance Engines"</div>
               <div class="text-slate-500">Outcome: Analyzed prompt failures instead of building the commercial pitch deck required by the Hospital Executive Board.</div>
             </div>
+
+            <div class="mt-5 p-4 bg-white border border-slate-200 rounded-none">
+              <div class="flex items-center justify-between mb-3 gap-3">
+                <span class="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-600">Zero-Shot Slide Sequence</span>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="prevAspect5ZeroShot()" class="px-3 py-1.5 text-xs font-mono font-semibold bg-slate-200 text-slate-700 hover:bg-slate-300 transition-colors rounded-none">Prev</button>
+                  <button type="button" onclick="nextAspect5ZeroShot()" class="px-3 py-1.5 text-xs font-mono font-semibold bg-sky-600 text-white hover:bg-sky-500 transition-colors rounded-none">Next</button>
+                </div>
+              </div>
+              <div class="relative overflow-hidden border border-slate-200 bg-slate-100">
+                <img id="aspect5-zero-shot-image" src="images/aspect5/zero_shot/1.png" alt="Aspect 5 zero-shot NotebookLM slide 1" class="w-full h-[420px] object-contain bg-white" />
+              </div>
+              <div class="mt-3 flex items-center justify-between gap-3">
+                <span id="aspect5-zero-shot-status" class="text-[11px] sm:text-xs font-mono text-slate-600">Slide 1 of 14</span>
+                <span class="text-[10px] sm:text-[11px] font-mono text-slate-400">GitHub Pages-safe asset path</span>
+              </div>
+            </div>
+
             <div class="mt-4 p-4 bg-rose-50 border border-rose-100 text-sm text-rose-800 rounded-none">
               <strong>Error Diagnostic:</strong> Without conditioning on role personas and strict format parameters, LLMs summarize high-level themes rather than extracting actionable clinical endpoints.
             </div>
@@ -1570,6 +1588,30 @@ sequenceDiagram
       `;
       indicator.innerText = `Slide ${index + 1} of 5`;
     }
+
+    const aspect5ZeroShotImages = Array.from({ length: 14 }, (_, i) => `images/aspect5/zero_shot/${i + 1}.png`);
+    let aspect5ZeroShotIndex = 0;
+
+    function renderAspect5ZeroShot() {
+      const img = document.getElementById('aspect5-zero-shot-image');
+      const status = document.getElementById('aspect5-zero-shot-status');
+      if (!img || !status) return;
+      img.src = aspect5ZeroShotImages[aspect5ZeroShotIndex];
+      img.alt = `Aspect 5 zero-shot NotebookLM slide ${aspect5ZeroShotIndex + 1}`;
+      status.innerText = `Slide ${aspect5ZeroShotIndex + 1} of ${aspect5ZeroShotImages.length}`;
+    }
+
+    function nextAspect5ZeroShot() {
+      aspect5ZeroShotIndex = (aspect5ZeroShotIndex + 1) % aspect5ZeroShotImages.length;
+      renderAspect5ZeroShot();
+    }
+
+    function prevAspect5ZeroShot() {
+      aspect5ZeroShotIndex = (aspect5ZeroShotIndex - 1 + aspect5ZeroShotImages.length) % aspect5ZeroShotImages.length;
+      renderAspect5ZeroShot();
+    }
+
+    renderAspect5ZeroShot();
 
     // Initialize Slide 1 on load
     switchTab(0);
