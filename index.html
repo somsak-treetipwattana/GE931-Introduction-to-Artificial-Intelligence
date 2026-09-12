@@ -87,6 +87,12 @@
     .katex-display {
       margin: 0.4em 0 !important;
     }
+    .hero-title {
+      text-shadow: 0 1px 0 rgba(255,255,255,0.45);
+    }
+    .hero-subtitle {
+      text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+    }
   </style>
 </head>
 
@@ -135,8 +141,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative pt-16 pb-24 bg-gradient-to-b from-sky-50/80 via-white/80 to-slate-50/80 border-b border-sky-100 rounded-none">
-      <div class="w-[90%] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="hero-sky relative overflow-hidden pt-16 pb-24 border-b border-sky-100 rounded-none">
+      <div class="hero-grid absolute inset-0 opacity-80"></div>
+      <div class="hero-dots absolute inset-0 opacity-90"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.7),transparent_62%)]"></div>
+
+      <div class="relative z-10 w-[90%] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-flex items-center space-x-2 px-4 py-1.5 text-xs sm:text-sm font-mono bg-white text-sky-800 border border-sky-200 shadow-sm mb-6 rounded-none">
           <span class="w-2.5 h-2.5 bg-sky-500 animate-ping rounded-none"></span>
           <span class="font-semibold">Basic UDI-DI: 885901234RETINA01V5</span>
@@ -144,14 +154,14 @@
           <span>Software Build v2.4.1</span>
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+        <h1 class="hero-title text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
           AI-SaMD Thai FDA Regulatory Dossier
         </h1>
-        <p class="mt-4 text-xl sm:text-2xl font-semibold text-sky-700">
+        <p class="hero-subtitle mt-4 text-xl sm:text-2xl font-semibold text-sky-800">
           Accelerating Clearance & Hospital Commercialization for an AI Retinal Screening SaMD
         </p>
 
-        <p class="mt-6 text-base sm:text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        <p class="mt-6 text-base sm:text-lg text-slate-700 max-w-4xl mx-auto leading-relaxed">
           A 30-slide regulatory engineering portfolio demonstrating how multi-modal prompt conditioning transforms generic generative models into an inspection-ready ASEAN CSDT technical dossier and hospital commercialization engine.
         </p>
 
