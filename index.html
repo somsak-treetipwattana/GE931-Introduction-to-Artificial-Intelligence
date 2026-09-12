@@ -116,6 +116,23 @@
       color: #0f4c81;
       text-shadow: 0 1px 0 rgba(255,255,255,0.35);
     }
+    main {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    main > section[id^="aspect-"] {
+      position: relative;
+      margin-top: 2.25rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.24);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08), 0 6px 18px rgba(14, 116, 144, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      background: rgba(255, 255, 255, 0.98);
+    }
+    main > section[id^="aspect-"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 52px rgba(15, 23, 42, 0.10), 0 10px 22px rgba(14, 116, 144, 0.08);
+    }
     @keyframes heroDrift {
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
